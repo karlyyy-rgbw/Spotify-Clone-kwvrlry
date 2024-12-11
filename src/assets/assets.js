@@ -44,6 +44,7 @@ import song3 from  './song3.mp3'
 import facebook from './Facebook_Logo_2023.png'
 import google from './Instagram_logo_2022.svg.png'
 import tweet from './Logo_of_Twitter.svg'
+import pluss from './pluss.png'
 export const assets = {
     bell_icon,
     home_icon,
@@ -71,7 +72,8 @@ export const assets = {
     clock_icon,
     facebook,
     google,
-    tweet
+    tweet,
+    pluss,
 
 }
 
