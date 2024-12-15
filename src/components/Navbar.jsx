@@ -5,6 +5,7 @@ import { jwtDecode } from 'jwt-decode';
 const Navbar = () => {  
   const [user, setUser] = useState(null);  
   const navigate = useNavigate();  
+  const firstLetter = user?.email.charAt(0).toUpperCase();
 
   /* Verify if User In-Session in LocalStorage */  
   useEffect(() => {  
@@ -47,7 +48,8 @@ const Navbar = () => {
       <div className='flex items-center gap-4 pr-3'>
         <p className='bg-white text-black text-[15px] px-4 py-1 rounded-2xl hidden md:block cursor-pointer'>Explore Premium</p>
         <p className='bg-black py-1 px-4 rounded-2xl text-white text-[15px] cursor-pointer hover:bg-[#ffffff26]' onClick={handleLogout}>Log Out</p>
-        <p className='bg-purple-500 text-black w-7 h-7 rounded-full flex justify-center'>{user.email.charAt(0)}</p>  
+        <p className='bg-purple-500 text-black w-7 h-7 rounded-full flex justify-center'> {firstLetter}  </p>  
+
       </div>
     </div>
     <div className='flex items-center gap-2 mt-4 pl-2'>
